@@ -200,11 +200,11 @@ describe(Support.getTestDialectTeaser('belongsToMany'), function() {
       expect(Tag.Products.toSource).to.be.an.instanceOf(BelongsTo);
       expect(Tag.Products.toTarget).to.be.an.instanceOf(BelongsTo);
 
-      expect(Product.Tags.toSource.foreignKey).to.equal(Product.Tags.foreignKey);
-      expect(Product.Tags.toTarget.foreignKey).to.equal(Product.Tags.otherKey);
+      expect(Product.Tags.toSource.sourceKey).to.equal(Product.Tags.foreignKey);
+      expect(Product.Tags.toTarget.sourceKey).to.equal(Product.Tags.otherKey);
 
-      expect(Tag.Products.toSource.foreignKey).to.equal(Tag.Products.foreignKey);
-      expect(Tag.Products.toTarget.foreignKey).to.equal(Tag.Products.otherKey);
+      expect(Tag.Products.toSource.sourceKey).to.equal(Tag.Products.foreignKey);
+      expect(Tag.Products.toTarget.sourceKey).to.equal(Tag.Products.otherKey);
 
       expect(Object.keys(ProductTag.rawAttributes).length).to.equal(4);
       expect(Object.keys(ProductTag.rawAttributes)).to.deep.equal(['id', 'priority', 'productId', 'tagId']);
@@ -237,11 +237,11 @@ describe(Support.getTestDialectTeaser('belongsToMany'), function() {
       expect(Tag.Products.manyFromSource).to.be.an.instanceOf(HasMany);
       expect(Tag.Products.manyFromTarget).to.be.an.instanceOf(HasMany);
 
-      expect(Product.Tags.manyFromSource.foreignKey).to.equal(Product.Tags.foreignKey);
-      expect(Product.Tags.manyFromTarget.foreignKey).to.equal(Product.Tags.otherKey);
+      expect(Product.Tags.manyFromSource.targetKey).to.equal(Product.Tags.foreignKey);
+      expect(Product.Tags.manyFromTarget.targetKey).to.equal(Product.Tags.otherKey);
 
-      expect(Tag.Products.manyFromSource.foreignKey).to.equal(Tag.Products.foreignKey);
-      expect(Tag.Products.manyFromTarget.foreignKey).to.equal(Tag.Products.otherKey);
+      expect(Tag.Products.manyFromSource.targetKey).to.equal(Tag.Products.foreignKey);
+      expect(Tag.Products.manyFromTarget.targetKey).to.equal(Tag.Products.otherKey);
 
       expect(Object.keys(ProductTag.rawAttributes).length).to.equal(4);
       expect(Object.keys(ProductTag.rawAttributes)).to.deep.equal(['id', 'priority', 'productId', 'tagId']);
@@ -274,11 +274,11 @@ describe(Support.getTestDialectTeaser('belongsToMany'), function() {
       expect(Tag.Products.oneFromSource).to.be.an.instanceOf(HasOne);
       expect(Tag.Products.oneFromTarget).to.be.an.instanceOf(HasOne);
 
-      expect(Product.Tags.oneFromSource.foreignKey).to.equal(Product.Tags.foreignKey);
-      expect(Product.Tags.oneFromTarget.foreignKey).to.equal(Product.Tags.otherKey);
+      expect(Product.Tags.oneFromSource.targetKey).to.equal(Product.Tags.foreignKey);
+      expect(Product.Tags.oneFromTarget.targetKey).to.equal(Product.Tags.otherKey);
 
-      expect(Tag.Products.oneFromSource.foreignKey).to.equal(Tag.Products.foreignKey);
-      expect(Tag.Products.oneFromTarget.foreignKey).to.equal(Tag.Products.otherKey);
+      expect(Tag.Products.oneFromSource.targetKey).to.equal(Tag.Products.foreignKey);
+      expect(Tag.Products.oneFromTarget.targetKey).to.equal(Tag.Products.otherKey);
 
       expect(Object.keys(ProductTag.rawAttributes).length).to.equal(4);
       expect(Object.keys(ProductTag.rawAttributes)).to.deep.equal(['id', 'priority', 'productId', 'tagId']);
@@ -311,11 +311,11 @@ describe(Support.getTestDialectTeaser('belongsToMany'), function() {
       expect(Tag.Products.toSource).to.be.ok;
       expect(Tag.Products.toTarget).to.be.ok;
 
-      expect(Product.Tags.toSource.foreignKey).to.equal(Product.Tags.foreignKey);
-      expect(Product.Tags.toTarget.foreignKey).to.equal(Product.Tags.otherKey);
+      expect(Product.Tags.toSource.sourceKey).to.equal(Product.Tags.foreignKey);
+      expect(Product.Tags.toTarget.sourceKey).to.equal(Product.Tags.otherKey);
 
-      expect(Tag.Products.toSource.foreignKey).to.equal(Tag.Products.foreignKey);
-      expect(Tag.Products.toTarget.foreignKey).to.equal(Tag.Products.otherKey);
+      expect(Tag.Products.toSource.sourceKey).to.equal(Tag.Products.foreignKey);
+      expect(Tag.Products.toTarget.sourceKey).to.equal(Tag.Products.otherKey);
 
       expect(Object.keys(ProductTag.rawAttributes).length).to.equal(4);
       expect(Object.keys(ProductTag.rawAttributes)).to.deep.equal(['id', 'priority', 'product_ID', 'tag_ID']);
@@ -348,11 +348,11 @@ describe(Support.getTestDialectTeaser('belongsToMany'), function() {
       expect(Tag.Products.oneFromSource).to.be.an.instanceOf(HasOne);
       expect(Tag.Products.oneFromTarget).to.be.an.instanceOf(HasOne);
 
-      expect(Product.Tags.oneFromSource.foreignKey).to.equal(Product.Tags.foreignKey);
-      expect(Product.Tags.oneFromTarget.foreignKey).to.equal(Product.Tags.otherKey);
+      expect(Product.Tags.oneFromSource.targetKey).to.equal(Product.Tags.foreignKey);
+      expect(Product.Tags.oneFromTarget.targetKey).to.equal(Product.Tags.otherKey);
 
-      expect(Tag.Products.oneFromSource.foreignKey).to.equal(Tag.Products.foreignKey);
-      expect(Tag.Products.oneFromTarget.foreignKey).to.equal(Tag.Products.otherKey);
+      expect(Tag.Products.oneFromSource.targetKey).to.equal(Tag.Products.foreignKey);
+      expect(Tag.Products.oneFromTarget.targetKey).to.equal(Tag.Products.otherKey);
 
       expect(Object.keys(ProductTag.rawAttributes).length).to.equal(4);
       expect(Object.keys(ProductTag.rawAttributes)).to.deep.equal(['id', 'priority', 'product_ID', 'tag_ID']);
@@ -385,11 +385,11 @@ describe(Support.getTestDialectTeaser('belongsToMany'), function() {
       expect(Tag.Products.toSource).to.be.ok;
       expect(Tag.Products.toTarget).to.be.ok;
 
-      expect(Product.Tags.toSource.foreignKey).to.equal(Product.Tags.foreignKey);
-      expect(Product.Tags.toTarget.foreignKey).to.equal(Product.Tags.otherKey);
+      expect(Product.Tags.toSource.sourceKey).to.equal(Product.Tags.foreignKey);
+      expect(Product.Tags.toTarget.sourceKey).to.equal(Product.Tags.otherKey);
 
-      expect(Tag.Products.toSource.foreignKey).to.equal(Tag.Products.foreignKey);
-      expect(Tag.Products.toTarget.foreignKey).to.equal(Tag.Products.otherKey);
+      expect(Tag.Products.toSource.sourceKey).to.equal(Tag.Products.foreignKey);
+      expect(Tag.Products.toTarget.sourceKey).to.equal(Tag.Products.otherKey);
 
       expect(Object.keys(ProductTag.rawAttributes).length).to.equal(4);
       expect(Object.keys(ProductTag.rawAttributes)).to.deep.equal(['id', 'priority', 'ProductId', 'TagId']);
