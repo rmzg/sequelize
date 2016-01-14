@@ -3,10 +3,6 @@
 /* jshint -W030 */
 var chai = require('chai')
   , expect = chai.expect
-  , Support = require(__dirname + '/../support')
-  , Sequelize = require('../../../index')
-  , Promise = Sequelize.Promise
-  , current = Support.sequelize
 	, Association = require('../../../lib/associations/index');
 
 describe('describe test', function() {
