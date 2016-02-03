@@ -365,7 +365,7 @@ describe(Support.getTestDialectTeaser('Include'), function() {
       Product.hasMany(Price);
       Price.belongsTo(Product);
 
-      User.hasMany(GroupMember, {as: 'Memberships'});
+      var testass = User.hasMany(GroupMember, {as: 'Memberships'});
       GroupMember.belongsTo(User);
       GroupMember.belongsTo(Rank);
       GroupMember.belongsTo(Group);
